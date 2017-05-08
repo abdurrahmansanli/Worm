@@ -54,6 +54,7 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,BaseTVC
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTVC") as! FeedTVC
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.delegate = self
         cell.feedCard = arrayOfFeedData[indexPath.row]
         cell.refresh()
